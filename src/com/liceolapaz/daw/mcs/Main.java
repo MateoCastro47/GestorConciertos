@@ -13,6 +13,7 @@ public class Main {
             escribirmenu();
             //Leemos la opción
             opcion = scanner.nextInt();
+            scanner.nextLine();
             //Hacemos un switch para ver que opción seguir.
             switch (opcion){
                 case 0:
@@ -21,16 +22,16 @@ public class Main {
                 case 1:
                     System.out.println("Ingrese su nombre");
                     String nombre = scanner.nextLine();
-                    scanner.next();
+
                     System.out.println("Ingrese su apellido");
                     String apellido = scanner.nextLine();
-                    scanner.next();
+
                     System.out.println("Ingrese su DNI");
                     String DNI = scanner.nextLine();
-                    scanner.next();
+
                     System.out.println("Ingrese su email");
                     String email = scanner.nextLine();
-                    scanner.next();
+
                     //Vamos a ver si el email existe
                     boolean emailExiste = false; //Inicialmente no existe.
                     for (Entrada e : gestor.getEntradasVendidas()){
@@ -45,7 +46,6 @@ public class Main {
                     }
                     //Validación de fecha
                     System.out.println("Ingrese su fecha de nacimiento (YYYY-MM-DD)");
-                    scanner.nextLine(); //Limpia el buffer que deja un scanner.next() anterior.
                     String fechaUsuario = scanner.nextLine();
                     while (!fechaUsuario.matches("\\d{4}-\\d{2}-\\d{2}")){
                         System.out.println("Error: Formato incorrecto. Use (YYYY-MM-DD)");
@@ -67,8 +67,10 @@ public class Main {
                     if (tipoEntrada == 1){
                         System.out.println("Ingrese fila");
                         int fila = scanner.nextInt();
+                        scanner.nextLine();
                         System.out.println("Ingrese asiento");
                         int asiento = scanner.nextInt();
+                        scanner.nextLine();
                         //Contamos cuantos asientos hay en esa fila
                         int asientosOcupadosEnFila = 0;
                         for (Entrada e : gestor.getEntradasVendidas()){
