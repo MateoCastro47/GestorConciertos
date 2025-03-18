@@ -1,13 +1,5 @@
 Este proyecto es una aplicación de consola en Java que permite la gestión de entradas para un concierto. Los usuarios pueden reservar entradas, visualizar su reserva y listar las entradas vendidas y disponibles.
 
---Características principales--
-
-Reservar entradas (Grada o Pista, con opción de backstage).
-Buscar y mostrar información de una entrada por email.
-Listar todas las entradas vendidas.
-Mostrar entradas disponibles para la venta.
-Validaciones para evitar asientos duplicados y emails repetidos.
-
 --Estructura del Proyecto--
 El código está organizado en las siguientes clases:
 
